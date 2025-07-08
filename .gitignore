@@ -1,8 +1,22 @@
-# 忽略虚拟环境
-.venv/
+# 列出应被 Git 忽略的文件/目录。
+# Python cache
 __pycache__/
-*.pyc
-*.pyo
-*.log
+*.py[cod]
+#
+# Virtual environments
+.env/
+venv/
+.venv/
+
+# IDE settings
+.vscode/
+.idea/
+
+# Build artifacts
+build/
+dist/
 *.egg-info/
-.env
+
+# OS files
+.DS_Store
+

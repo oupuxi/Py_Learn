@@ -1,0 +1,5 @@
+# YAML 示例 (params.yaml)
+n1: 1.0        # 介质1折射率（空气）
+n2: 1.5        # 介质2折射率（玻璃）
+incident_angle: 30  # 入射角（度）
+output: "output.png"  # 输出图像文件名

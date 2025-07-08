@@ -1,21 +1,20 @@
-# 构建/工具配置
-[build-system]
-requires = ["setuptools>=61"]
-build-backend = "setuptools.build_meta"
-
-[project]
-name = "py_learn"
+# 构建/工具配置,遵循 PEP 518/PEP 621，在 TOML 文件中声明项目元数据和构建要求。
+[project]# 项目基本信息和依赖
+name = "light-refraction-sim"
 version = "0.1.0"
-description = "学习用项目"
-requires-python = ">=3.9"
+description = "CLI tool for simulating light ray refraction at an interface."
+authors = [{name="Your Name", email="you@example.com"}]
+requires-python = ">=3.10"
 dependencies = [
-    "numpy",
-    "tqdm"
+    "numpy>=1.20",
+    "matplotlib>=3.5",
+    "PyYAML>=6.0"
 ]
 
-[tool.black]
-line-length = 88
+[project.scripts]# 定义了控制台脚本
+light-refraction-sim = "cli.main:main"
 
-[tool.mypy]
-strict = true
-ignore_missing_imports = true
+[build-system]# 指明使用 setuptools 进行构建。
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
